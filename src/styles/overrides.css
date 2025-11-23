@@ -1,0 +1,65 @@
+/* App-wide overrides loaded last to keep specificity manageable */
+
+/* Header action buttons */
+.main-header .header-btn {
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
+	color: #111111;
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+	height: 48px;
+	line-height: 48px;
+	border-radius: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 0;
+	padding: 0 28px;
+}
+
+.main-header .header-btn:hover {
+	background: #f6f6f6;
+	color: #0f1d17;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+	border-color: #dca11b;
+}
+
+.main-header .show-reg-form {
+	height: 38px;
+	line-height: 38px;
+	padding: 0 16px;
+	border-radius: 12px;
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+	color: #111111;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 0;
+}
+
+.main-header .show-reg-form:hover {
+	background: #f6f6f6;
+	border-color: #dca11b;
+	color: #0f1d17;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.header-btn:hover span,
+.show-reg-form:hover span,
+.header-btn:hover i,
+.show-reg-form:hover i {
+	color: var(--main-color);
+}
+
+.header-search-btn,
+.wish_btn {
+	color: #1f1f1f;
+}
+
+.wish_count {
+	box-shadow: 0 0 0 3px #ffffff;
+}
+
+/* Give the Sign In button breathing room from the wishlist divider */
+.main-header .wish_btn {
+	margin-left: 14px;
+}

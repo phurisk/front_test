@@ -1,0 +1,8 @@
+:root {
+	/* Brand colors pulled from the Thai Industrial Property logo */
+	--main-color: #dca11b;
+	--second-color: #1f3a2b;
+	--accent-contrast: #f5e8cf;
+	--main-gradient: linear-gradient(135deg, #f4c542 0%, #d89716 45%, #b4790a 100%);
+	--main-font: 'Poppins', sans-serif;
+}
