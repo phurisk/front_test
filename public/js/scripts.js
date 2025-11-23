@@ -18,11 +18,34 @@ function initRenstate() {
         $(window).on("scroll resize", updateScrollProgress);
         updateScrollProgress();
     }
-    //   Background image ------------------
-    var a = $(".bg");
-    a.each(function (a) {
-        if ($(this).attr("data-bg")) $(this).css("background-image", "url(" + $(this).data("bg") + ")");
+    //   Background image (lazy for below-the-fold) ------------------
+    var $bgAll = $(".bg[data-bg]");
+    var $criticalBg = $bgAll.slice(0, 2); // hero / above the fold
+    $criticalBg.each(function () {
+        var $el = $(this);
+        $el.css("background-image", "url(" + $el.data("bg") + ")");
     });
+    var $lazyBg = $bgAll.slice(2);
+    if ("IntersectionObserver" in window && $lazyBg.length) {
+        var bgObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var el = entry.target;
+                    var $el = $(el);
+                    $el.css("background-image", "url(" + $el.data("bg") + ")");
+                    observer.unobserve(el);
+                }
+            });
+        }, { rootMargin: "200px 0px" });
+        $lazyBg.each(function () {
+            bgObserver.observe(this);
+        });
+    } else {
+        $lazyBg.each(function () {
+            var $el = $(this);
+            $el.css("background-image", "url(" + $el.data("bg") + ")");
+        });
+    }
     //   Isotope------------------
     function n() {
         if ($(".gallery-items").length) {
