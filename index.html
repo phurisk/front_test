@@ -7,8 +7,13 @@
   <link rel="icon" type="image/png" href="/images/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>Thai Industrial Property | Industrial Real Estate</title>
-  <link type="text/css" rel="stylesheet" href="/css/plugins.css">
-  <link type="text/css" rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
+  <link type="text/css" rel="preload" as="style" href="/css/plugins.css" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/plugins.css"></noscript>
+  <link type="text/css" rel="preload" as="style" href="/css/style.css" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
   <style type="text/css">
     .scrollax-performance,
     .scrollax-performance *,
@@ -26,9 +31,9 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/plugins.js"></script>
-  <script src="/js/scripts.js"></script>
+  <script src="/js/jquery.min.js" defer></script>
+  <script src="/js/plugins.js" defer></script>
+  <script src="/js/scripts.js" defer></script>
 </body>
 
 </html>
