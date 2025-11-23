@@ -1,5 +1,52 @@
 /* App-wide overrides loaded last to keep specificity manageable */
 
+/* Scroll progress indicator along the top bar */
+.scroll-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 4px;
+	width: 0;
+	background: var(--main-gradient);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+	z-index: 1300;
+	pointer-events: none;
+	transition: width 80ms linear;
+}
+
+/* Ensure icon fonts render with fallback immediately */
+@font-face {
+	font-family: "Font Awesome 6 Brands";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/fa-brands-400.woff2") format("woff2"), url("/fonts/fa-brands-400.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+	src: url("/fonts/fa-solid-900.woff2") format("woff2"), url("/fonts/fa-solid-900.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/fa-regular-400.woff2") format("woff2"), url("/fonts/fa-regular-400.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Font Awesome 6 Pro";
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url("/fonts/fa-light-300.woff2") format("woff2"), url("/fonts/fa-light-300.ttf") format("truetype");
+}
+
 /* Header action buttons */
 .main-header .header-btn {
 	background: #ffffff;
@@ -57,6 +104,27 @@
 
 .wish_count {
 	box-shadow: 0 0 0 3px #ffffff;
+}
+
+/* Native sticky fallback to avoid scrollToFixed layout thrash */
+.supports-sticky .sticky-fixed-form {
+	position: sticky;
+	top: 110px;
+}
+
+.supports-sticky .sticky-btf {
+	position: sticky;
+	top: 100px;
+}
+
+.supports-sticky .sticky-init-col {
+	position: sticky;
+	top: 110px;
+}
+
+.supports-sticky .sticky-fixbar {
+	position: sticky;
+	top: var(--fixbar-top, 20px);
 }
 
 /* Give the Sign In button breathing room from the wishlist divider */
