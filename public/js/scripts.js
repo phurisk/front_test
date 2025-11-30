@@ -896,8 +896,8 @@ function initRenstate() {
     var b = new Scrollax();
     b.reload();
     b.init();
-    $('.svg-corner_dark').append('<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 40V0C40 22.0914 22.0914 40 0 40H40Z" fill="#000000"></path></svg>');
-    $('.svg-corner_white').append('<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40 40V0C40 22.0914 22.0914 40 0 40H40Z" fill="#ffffff"></path></svg>');
+    $('.svg-corner_dark').append('<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#000000"></path></svg>');
+    $('.svg-corner_white').append('<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff"></path></svg>');
     var maxLp = 130
     $(".geodir-category-content p").each(function (i, div) {
         var textp = $(div).text();
